@@ -1,0 +1,35 @@
+li.article > a {
+    text-decoration: none;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+    color: black;
+    margin-left: 10px;
+}
+
+li.article .source a {
+    text-decoration: underline;
+    color: inherit;
+}
+
+li.article .time {
+    display: none;
+    color: gray;
+}
+
+li.article:hover .time {
+    display: inline;
+}
+
+li.article .source {
+    display: none;
+    color: gray;
+}
+
+li.article:hover .source {
+    display: inline;
+}
+
+
+
+
+

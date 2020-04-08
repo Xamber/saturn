@@ -1,0 +1,22 @@
+#root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    font-family: 'Alegreya Sans', sans-serif;
+    color: black;
+    font-size: 18px;
+}
+
+.app {
+    display: grid;
+    grid-template-columns: 100px 100px 1200px 50px;
+    grid-template-rows: auto;
+    grid-template-areas: ". sidebar main . ";
+}
+
+.hidden {
+    display: none !important;
+}

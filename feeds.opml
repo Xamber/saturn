@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<opml version="1.0">
+    <head>
+        <title>Artem F subscriptions in feedly Cloud</title>
+    </head>
+    <body>
+        <outline text="Люди" title="Люди">
+            <outline type="rss" text="SkazOff" title="SkazOff" xmlUrl="https://skazoff.ru/feed/" htmlUrl="https://skazoff.ru"/>
+            <outline type="rss" text="Игорь Штанга" title="Игоря Штанга" xmlUrl="http://nobelfaik.livejournal.com/data/rss" htmlUrl="https://nobelfaik.livejournal.com/"/>
+            <outline type="rss" text="Илья Варламов" title="Илья Варламов" xmlUrl="https://varlamov.ru/data/rss" htmlUrl="https://varlamov.ru/"/>
+            <outline type="rss" text="Бегущий редактор" title="Бегущий редактор" xmlUrl="http://vonoiral.com/rss/" htmlUrl="http://vonoiral.com/"/>
+            <outline type="rss" text="Здесь в…" title="Здесь в…" xmlUrl="http://staskulesh.com/feed/" htmlUrl="https://staskulesh.com"/>
+            <outline type="rss" text="Ильяхов" title="Ильяхов" xmlUrl="http://maximilyahov.ru/blog/rss/" htmlUrl="http://maximilyahov.ru/blog/"/>
+            <outline type="rss" text="Артемий Лебедев" title="Артемий Лебедев" xmlUrl="http://tema.livejournal.com/data/rss" htmlUrl="https://tema.livejournal.com/"/>
+            <outline type="rss" text="Denis Sexy IT" title="Denis Sexy IT" xmlUrl="https://tg2rss.xyz/channel/?name=denissexy" htmlUrl="https://t.me/denissexy"/>
+            <outline type="rss" text="Bubuk" title="Bubuk" xmlUrl="https://tg2rss.xyz/channel/?name=addmeto" htmlUrl="https://t.me/addmeto"/>
+            <outline type="rss" text="Пока завод не починили" title="Пока завод не починили" xmlUrl="https://tg2rss.xyz/channel/?name=jejeya_pictures" htmlUrl="https://t.me/jejeya_pictures"/>
+            <outline type="rss" text="vas3k" title="vas3k" xmlUrl="https://vas3k.ru/rss/" htmlUrl="https://vas3k.ru"/>
+        </outline>
+        <outline text="Компании" title="Компании">
+            <outline type="rss" text="Stack Overflow Blog" title="Stack Overflow Blog" xmlUrl="http://blog.stackoverflow.com/feed/" htmlUrl="https://stackoverflow.blog"/>
+            <outline type="rss" text="The DigitalOcean Blog" title="The DigitalOcean Blog" xmlUrl="https://blog.digitalocean.com/rss/" htmlUrl="https://blog.digitalocean.com/"/>
+            <outline type="rss" text="YouTube Blog" title="YouTube Blog" xmlUrl="https://youtube.googleblog.com/feeds/posts/default?alt=rss" htmlUrl="http://youtube.googleblog.com/"/>
+            <outline type="rss" text="Facebook Engineering" title="Facebook Engineering" xmlUrl="https://code.facebook.com/posts/rss" htmlUrl="https://engineering.fb.com"/>
+            <outline type="rss" text="Stories by Skyscanner Engineering on Medium" title="Skyscanner Engineering" xmlUrl="https://medium.com/feed/@SkyscannerEng" htmlUrl="https://medium.com/@SkyscannerEng?source=rss-401f3b3c958f------2"/>
+            <outline type="rss" text="Netflix TechBlog " title="Netflix TechBlog - Medium" xmlUrl="http://techblog.netflix.com/feeds/posts/default" htmlUrl="https://netflixtechblog.com?source=rss----2615bd06b42e---4"/>
+            <outline type="rss" text="Google Russia" title="Google Russia" xmlUrl="http://googlerussiablog.blogspot.com/atom.xml" htmlUrl="http://russia.googleblog.com/"/>
+            <outline type="rss" text="Uber Engineering" title="Uber Engineering" xmlUrl="https://eng.uber.com/feed/" htmlUrl="https://eng.uber.com"/>
+            <outline type="rss" text="LinkedIn Engineering" title="LinkedIn Engineering" xmlUrl="https://engineering.linkedin.com/blog.rss" htmlUrl="https://engineering.linkedin.com/blog.rss.html"/>
+            <outline type="rss" text="Sentry" title="Sentry" xmlUrl="https://blog.sentry.io/feed.xml" htmlUrl="https://blog.sentry.io"/>
+            <outline type="rss" text="The GitHub" title="GitHub" xmlUrl="https://github.com/blog/all.atom" htmlUrl="https://github.blog"/>
+            <outline type="rss" text="Docker" title="Docker" xmlUrl="http://blog.docker.io/feed/" htmlUrl="https://www.docker.com/blog"/>
+            <outline type="rss" text="Rust" title="Rust" xmlUrl="http://blog.rust-lang.org/feed.xml" htmlUrl="https://blog.rust-lang.org/"/>
+            <outline type="rss" text="Airbnb Engineering &amp; Data Science - Medium" title="Airbnb Engineering &amp; Data Science - Medium" xmlUrl="https://medium.com/feed/airbnb-engineering" htmlUrl="https://medium.com/airbnb-engineering?source=rss----53c7c27702d5---4"/>
+            <outline type="rss" text="Instagram Engineering - Medium" title="Instagram Engineering" xmlUrl="https://engineering.instagram.com/feed" htmlUrl="https://instagram-engineering.com?source=rss----37dc2a3034f2---4"/>
+            <outline type="rss" text="New on MIT Technology Review" title="MIT" xmlUrl="https://www.technologyreview.com/topnews.rss" htmlUrl="https://www.technologyreview.com/"/>
+            <outline type="rss" text="Medium Engineering - Medium" title="Medium Engineering" xmlUrl="https://medium.com/feed/medium-eng" htmlUrl="https://medium.engineering?source=rss----2817475205d3---4"/>
+            <outline type="rss" text="Engineering – The GitHub Blog" title="GitHub" xmlUrl="http://githubengineering.com/atom.xml" htmlUrl="https://github.blog"/>
+            <outline type="rss" text="Блог компании Селектел" title="Селектел" xmlUrl="https://blog.selectel.ru/feed/" htmlUrl="https://selectel.ru/blog"/>
+            <outline type="rss" text="Labs" title="Labs" xmlUrl="http://labs.spotify.com/feed/" htmlUrl="https://labs.spotify.com"/>
+            <outline type="rss" text="Блог Яндекса" title="Яндекс" xmlUrl="http://clubs.ya.ru/company/rss/posts.xml" htmlUrl="http://yandex.ru/blog/company"/>
+            <outline type="rss" text="The Go Programming Language Blog" title="The Go Programming Language" xmlUrl="http://blog.golang.org/feeds/posts/default" htmlUrl="http://blog.golang.org/"/>
+            <outline type="rss" text="Several People Are Coding - Medium" title="Slack" xmlUrl="https://slack.engineering/feed" htmlUrl="https://slack.engineering?source=rss----58820b6d8904---4"/>
+        </outline>
+        <outline text="Journal" title="Journal">
+            <outline type="rss" text="TJ: популярное" title="TJ" xmlUrl="https://tjournal.ru/rss/all" htmlUrl="https://tjournal.ru/"/>
+            <outline type="rss" text="Habr" title="Habr" xmlUrl="https://habr.com/ru/rss/best/daily/?fl=ru" htmlUrl="https://habr.com/"/>
+            <outline type="rss" text="Т—Ж" title="Т—Ж" xmlUrl="http://journal.tinkoff.ru/feed/" htmlUrl="https://journal.tinkoff.ru/"/>
+            <outline type="rss" text="The Village" title="The Village" xmlUrl="http://www.the-village.ru/village/recent.atom"/>
+            <outline type="rss" text="vc.ru: популярное" title="VC" xmlUrl="https://vc.ru/rss/all" htmlUrl="https://vc.ru/"/>
+            <outline type="rss" text="Журнал «Хакер»" title="Журнал «Хакер»" xmlUrl="http://feeds.feedburner.com/xakep/all" htmlUrl="https://xakep.ru"/>
+        </outline>
+        <outline text="Технологии (Magazine)" title="Технологии (Magazine)">
+            <outline type="rss" text="Handpicked stories about Technology on Medium" title="Handpicked stories about Technology on Medium" xmlUrl="https://medium.com/feed/topic/technology" htmlUrl="https://medium.com/topic/technology?source=rss-------8-----------------technology"/>
+            <outline type="rss" text="The Information" title="The Information" xmlUrl="http://www.theinformation.com/feed" htmlUrl="https://www.theinformation.com"/>
+            <outline type="rss" text="Hacker Noon" title="Hacker Noon" xmlUrl="https://hackernoon.com/feed" htmlUrl="http://github.com/dylang/node-rss"/>
+        </outline>
+        <outline text="Second Division" title="Second Division">
+            <!--<outline type="rss" text="Ebanoe.IT — голая правда о нашем айти" title="Ebanoe.IT" xmlUrl="http://ebanoe.it/feed/" htmlUrl="https://ebanoe.it"/> -->
+            <outline type="rss" text="Newochem" title="Newochem" xmlUrl="http://newochem.ru/feed/" htmlUrl="https://newochem.ru"/>
+            <outline type="rss" text="Системный Блок{ъ}" title="Системный Блок{ъ}" xmlUrl="https://sysblok.ru/feed/" htmlUrl="https://sysblok.ru"/>
+        </outline>
+        <outline text="Технологии (News)" title="Технологии (News)">
+            <!--<outline type="rss" text="/r/Technology" title="/r/Technology" xmlUrl="http://www.reddit.com/r/technology/.rss" htmlUrl="https://www.reddit.com/r/technology/"/>-->
+            <outline type="rss" text="Lobsters" title="Lobsters" xmlUrl="https://lobste.rs/rss" htmlUrl="https://lobste.rs/"/>
+            <outline type="rss" text="The Verge" title="The Verge" xmlUrl="http://www.theverge.com/rss/full.xml" htmlUrl="https://www.theverge.com/"/>
+            <outline type="rss" text="Hacker News: Newest" title="Hacker News" xmlUrl="http://hnrss.org/newest?points=20" htmlUrl="https://news.ycombinator.com/newest"/>
+        </outline>
+        <outline text="Trips" title="Trips">
+            <outline type="rss" text="Расследования авиакатастроф" title="Расследования авиакатастроф" xmlUrl="https://tg2rss.xyz/channel/?name=rumayday" htmlUrl="https://t.me/rumayday"/>
+            <outline type="rss" text="Atlas Obscura" title="Atlas Obscura" xmlUrl="http://www.atlasobscura.com/feeds/latest" htmlUrl="https://www.atlasobscura.com"/>
+            <outline type="rss" text="34travel.me" title="34travel.me" xmlUrl="https://34travel.me/feed" htmlUrl="https://34travel.me/"/>
+            <outline type="rss" text="Perito Burrito" title="Perito Burrito" xmlUrl="http://perito-burrito.com/feed" htmlUrl="http://perito-burrito.com/"/>
+        </outline>
+        <outline text="Science" title="Science">
+            <outline type="rss" text="Элементы" title="Элементы" xmlUrl="https://elementy.ru/rss/news" htmlUrl="https://elementy.ru/"/>
+            <outline type="rss" text="N+1: научные статьи, новости, открытия" title="N+1" xmlUrl="https://nplus1.ru/rss" htmlUrl="https://nplus1.ru"/>
+            <outline type="rss" text="Постнаука" title="Постнаука" xmlUrl="http://postnauka.ru/feed" htmlUrl="https://postnauka.ru/"/>
+            <outline type="rss" text="Наука и жизни" title="Наука и жизни" xmlUrl="https://www.nkj.ru/rss/" htmlUrl="https://www.nkj.ru"/>
+            <outline type="rss" text="Naked Science" title="Naked Science" xmlUrl="https://naked-science.ru/feedrss.xml" htmlUrl="https://naked-science.ru"/>
+        </outline>
+        <outline text="Iceland" title="Iceland">
+            <outline type="rss" text="grapevine" title="Reykjavik Grapevine" xmlUrl="https://grapevine.is/feed/" htmlUrl="https://grapevine.is"/>
+            <outline type="rss" text="Icelandmonitor" title="Iceland Monitor" xmlUrl="https://icelandmonitor.mbl.is/rss/" htmlUrl="https://icelandmonitor.mbl.is"/>
+            <outline type="rss" text="vedur" title="Vedur" xmlUrl="https://en.vedur.is/about-imo/news/rss.xml" htmlUrl="https://en.vedur.is/"/>
+            <outline type="rss" text="icelandreview" title="Iceland Review" xmlUrl="https://www.icelandreview.com/feed/" htmlUrl="https://www.icelandreview.com/"/>
+        </outline>
+    </body>
+</opml>
