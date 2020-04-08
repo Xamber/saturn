@@ -1,5 +1,5 @@
 import React from "react";
-import ArticleList from "./ArticleList/articleList";
+import ArticleList from "../ArticleList/articleList";
 
 
 class Topic extends React.Component {

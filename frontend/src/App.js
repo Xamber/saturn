@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 
-import MenuItem from "./components/menu";
-import View from "./components/view";
+import MenuItem from "./components/MenuItem/menuItem";
+import View from "./components/View/view";
 import Page from "./consts/page"
 import {Logo, Main, Sidebar} from "./components/Layout/layout";
 
@@ -11,7 +11,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            active: "Technology News",
+            active: Page[0].name,
         };
     }
 

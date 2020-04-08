@@ -1,5 +1,5 @@
 import React from "react";
-import Topic from "./../components/topic";
+import Topic from "../components/Topic/topic";
 import About from "../components/About/about";
 
 import scienceIcon from "./../assets/science.svg";
