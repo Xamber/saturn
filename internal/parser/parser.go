@@ -89,28 +89,7 @@ func RunParser(ctx context.Context, source entity.Source, output chan<- entity.A
 }
 
 func GetAdditionalInformation(article entity.Article) entity.Article {
-	if article.Link != "" {
-		article.Icon = "https://www.google.com/s2/favicons?domain=" + article.Link
-	} else {
-		article.Icon = "https://www.google.com/s2/favicons?domain=" + article.Source.WebSite
-	}
-	//g := goose.New()
-	//
-	//if article.Link == "" {
-	//	goosed, err := g.ExtractFromURL(source.Site)
-	//	if err != nil {
-	//		article.Icon = goosed.MetaFavicon
-	//	}
-	//	return article
-	//}
-	//
-	//goosed, err := g.ExtractFromURL(article.Link)
-	//
-	//if err == nil {
-	//	article.Icon = goosed.MetaFavicon
-	//	article.Image = goosed.TopImage
-	//	article.Text = goosed.CleanedText
-	//}
+	// This code is doing nothing but should be saved for the future.
 	return article
 }
 
@@ -138,7 +117,6 @@ func parse(source entity.Source, updated time.Time) ([]entity.Article, error) {
 			Data:     *item.PublishedParsed,
 			Source:   &source,
 			SourceID: source.Id,
-			Icon:     source.Icon,
 		}
 
 		article = GetAdditionalInformation(article)
