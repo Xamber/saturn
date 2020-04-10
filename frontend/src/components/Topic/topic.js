@@ -4,7 +4,7 @@ import ArticleList from "../ArticleList/articleList";
 
 class Topic extends React.Component {
     // this endpoint should be changed to the topic
-    api = "/group?name=";
+    api = "/topic?name=";
 
     constructor(props) {
         super(props);
