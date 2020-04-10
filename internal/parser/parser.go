@@ -27,18 +27,19 @@ func Manager(ctx context.Context, sources []entity.Source, output chan entity.Ar
 }
 
 func Updater(ctx context.Context, parsed <-chan entity.Article) {
-	log.Info("Parser manager is started")
+	log.Info("Updater is started")
 
 	for {
 		select {
 		case <-ctx.Done():
+			log.Info("Stop signal received for Updater. Stopping..")
 			return
 		case article := <-parsed:
 			err := database.InsertArticle(article)
 			if err != nil {
 				log.Error(err)
 			} else {
-				log.WithField("Article", article.Title).Info("Article was handled by manager")
+				log.WithField("Article", article.Title).Info("Article was inserted into BD")
 			}
 		}
 	}
@@ -53,7 +54,7 @@ func RunParser(ctx context.Context, source entity.Source, output chan<- entity.A
 	ticker := time.NewTicker(timeout)
 
 	feedLogger.Info("Parsing is started")
-	var errCount int = 0
+	var errCount = 0
 
 	for {
 		articles, err := parse(source, updated)
@@ -72,7 +73,9 @@ func RunParser(ctx context.Context, source entity.Source, output chan<- entity.A
 				updated = article.Data
 			}
 		}
-		feedLogger.WithField("Next", time.Now().Add(timeout)).Debug("Sleep till the next tick")
+
+		plannedParsingTime := time.Now().Add(timeout)
+		feedLogger.WithField("Next", plannedParsingTime).Debug("Sleep until the next tick")
 
 		select {
 		case <-ctx.Done():
@@ -116,7 +119,6 @@ func parse(source entity.Source, updated time.Time) ([]entity.Article, error) {
 
 	feedLogger := log.WithField("Feed", source.RSS)
 	feed, err := feeder.ParseURL(source.RSS)
-
 	if err != nil {
 		feedLogger.Error(err)
 		return parserArticles, err
@@ -131,12 +133,12 @@ func parse(source entity.Source, updated time.Time) ([]entity.Article, error) {
 		}
 
 		article := entity.Article{
-			Title: item.Title,
-			Link:  item.Link,
-			Data:  *item.PublishedParsed,
-			Source: &source,
+			Title:    item.Title,
+			Link:     item.Link,
+			Data:     *item.PublishedParsed,
+			Source:   &source,
 			SourceID: source.Id,
-			Icon:  source.Icon,
+			Icon:     source.Icon,
 		}
 
 		article = GetAdditionalInformation(article)

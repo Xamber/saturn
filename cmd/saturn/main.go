@@ -41,7 +41,7 @@ func main() {
 	feedsPath := filepath.Join(currentDir, "feeds.opml")
 
 	sources = opml_parser.GetSourcesFromFile(feedsPath)
-	err = database.ComplainSourceList(sources)
+	err = database.CompleteSourcesList(sources)
 	if err != nil {
 		log.Error(err)
 		os.Exit(1)

@@ -20,12 +20,3 @@ func GetByGroup(group string, limit int) ([]entity.Article, error) {
 	}
 	return articles, nil
 }
-
-func GetByName(feed string, limit int) ([]entity.Article, error) {
-	var articles []entity.Article
-	err := Database.Model(&articles).Relation("Source").Where("source.name = ?", feed).Order("data DESC").Limit(limit).Select()
-	if err != nil {
-		return articles, err
-	}
-	return articles, nil
-}
