@@ -49,7 +49,7 @@ func RunParser(ctx context.Context, source entity.Source, output chan<- entity.A
 	feedLogger := log.WithField("Feed", source.RSS)
 
 	updated := time.Now().Add(-time.Second * 3600 * 24 * 15)
-	timeout := time.Second * 60 * 1
+	timeout := time.Second * 60 * 3
 
 	ticker := time.NewTicker(timeout)
 
