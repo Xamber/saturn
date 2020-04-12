@@ -11,7 +11,7 @@ const Icon = (props) => {
     return <img className="icon" alt={props.title} src={favicon}/>
 };
 
-const Link = (props) => <a target="_blank" href={props.link}>{props.title}</a>;
+const Link = (props) => <a target="_blank" rel="noopener noreferrer" href={props.link}>{props.title}</a>;
 
 const Hint = (props) => <span className={"hint"}>
     <span className={"time"}> {timeSince(props.time)} ago by </span>

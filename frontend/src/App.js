@@ -20,11 +20,11 @@ class App extends React.Component {
         let Views = [];
 
         for (const item of Page) {
-            let menuItem = <MenuItem active={this.state.active === item.name} name={item.name} img={item.img}
+            let menuItem = <MenuItem key={item.name} active={this.state.active === item.name} name={item.name} img={item.img}
                                      onClick={() => {
                                          this.setState({active: item.name})
                                      }}/>;
-            let viewItem = <View active={this.state.active} name={item.name} view={item.view}/>;
+            let viewItem = <View key={item.name} active={this.state.active} name={item.name} view={item.view}/>;
 
             Menu.push(menuItem);
             Views.push(viewItem);
