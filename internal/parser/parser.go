@@ -62,7 +62,7 @@ func RunParser(ctx context.Context, source entity.Source, output chan<- entity.A
 			errCount++
 			log.Debug(err)
 		}
-		if errCount > 3 {
+		if errCount > 10 {
 			log.Error(err)
 			break
 		}
