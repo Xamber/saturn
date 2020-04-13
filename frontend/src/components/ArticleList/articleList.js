@@ -3,8 +3,24 @@ import Article from "../Article/article";
 
 import "./articleList.css"
 
+const Divider = (props) => <div className={"divider"}>{props.day}</div>;
+
+
 const ArticleList = (props) => {
-    const articles = props.articlies.map((article) => <Article key={article.Id} {...article} />);
+    let prevDay = -1;
+    let articles = [];
+
+    for (let article of props.articlies) {
+        let date = new Date(article.Data);
+        let day = date.getUTCDate();
+        let month = date.getMonth() + 1;
+        if (day !== prevDay ) {
+            articles.push(<Divider day={`${day}.${month}` } key={'day:' + day} />)
+        }
+        articles.push(<Article key={article.Id} {...article} />);
+        prevDay = day
+
+    }
     return <div className={"group"}>
         <ul>{articles}</ul>
     </div>
