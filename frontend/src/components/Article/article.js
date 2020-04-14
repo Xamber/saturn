@@ -6,9 +6,14 @@ import timeSince from "../../utils/timeSince";
 const FaviconBase = "https://www.google.com/s2/favicons?domain=";
 
 const Icon = (props) => {
-    var hostname = (new URL(props.link)).hostname;
-    let favicon = FaviconBase + hostname;
-    return <img className="icon" alt={props.title} src={favicon}/>
+    try {
+        var hostname = (new URL(props.link)).hostname;
+        let favicon = FaviconBase + hostname;
+        return <img className="icon" alt={props.title} src={favicon}/>
+    } catch (e) {
+        console.error(e, props.link);
+        return <img className="icon" alt={props.link} src={FaviconBase + props.link}/>
+    }
 };
 
 const Link = (props) => <a target="_blank" rel="noopener noreferrer" href={props.link}>{props.title}</a>;
@@ -25,4 +30,4 @@ const Article = (article) => <li className="article">
 </li>;
 
 
-export default Article;
+export {Article, Icon};

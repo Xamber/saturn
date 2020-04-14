@@ -1,5 +1,6 @@
 import React from "react";
 import ArticleList from "../ArticleList/articleList";
+import SourceList from "../SourceList/SourceList";
 
 
 class Topic extends React.Component {
@@ -30,8 +31,12 @@ class Topic extends React.Component {
     }
 
     render() {
-        return <ArticleList articlies={this.state.articles}/>
+        return <div>
+            <ArticleList articlies={this.state.articles}/>
+            <div className={"divider"} style={{"maxWidth": "10%"}} />
+            <SourceList name={this.props.name}/>
+        </div>
     }
 }
 
-export default Topic
+export default Topic;
