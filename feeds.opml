@@ -45,13 +45,13 @@
         </outline>
         <outline text="Journal" title="Journal">
             <outline type="rss" text="TJ: популярное" title="TJ" xmlUrl="https://tjournal.ru/rss/all" htmlUrl="https://tjournal.ru/"/>
-            <outline type="rss" text="Habr" title="Habr" xmlUrl="https://habr.com/ru/rss/best/daily/?fl=ru" htmlUrl="https://habr.com/"/>
             <outline type="rss" text="Т—Ж" title="Т—Ж" xmlUrl="http://journal.tinkoff.ru/feed/" htmlUrl="https://journal.tinkoff.ru/"/>
             <outline type="rss" text="The Village" title="The Village" xmlUrl="http://www.the-village.ru/village/recent.atom"/>
             <outline type="rss" text="vc.ru: популярное" title="VC" xmlUrl="https://vc.ru/rss/all" htmlUrl="https://vc.ru/"/>
             <outline type="rss" text="Журнал «Хакер»" title="Журнал «Хакер»" xmlUrl="http://feeds.feedburner.com/xakep/all" htmlUrl="https://xakep.ru"/>
         </outline>
         <outline text="Технологии (Magazine)" title="Технологии (Magazine)">
+            <outline type="rss" text="Habr" title="Habr" xmlUrl="https://habr.com/ru/rss/best/daily/?fl=ru" htmlUrl="https://habr.com/"/>
             <outline type="rss" text="Handpicked stories about Technology on Medium" title="Handpicked stories about Technology on Medium" xmlUrl="https://medium.com/feed/topic/technology" htmlUrl="https://medium.com/topic/technology?source=rss-------8-----------------technology"/>
             <outline type="rss" text="The Information" title="The Information" xmlUrl="http://www.theinformation.com/feed" htmlUrl="https://www.theinformation.com"/>
             <outline type="rss" text="Hacker Noon" title="Hacker Noon" xmlUrl="https://hackernoon.com/feed" htmlUrl="http://github.com/dylang/node-rss"/>
@@ -65,11 +65,10 @@
             <!--<outline type="rss" text="/r/Technology" title="/r/Technology" xmlUrl="http://www.reddit.com/r/technology/.rss" htmlUrl="https://www.reddit.com/r/technology/"/>-->
             <outline type="rss" text="Lobsters" title="Lobsters" xmlUrl="https://lobste.rs/rss" htmlUrl="https://lobste.rs/"/>
             <outline type="rss" text="The Verge" title="The Verge" xmlUrl="http://www.theverge.com/rss/full.xml" htmlUrl="https://www.theverge.com/"/>
-            <outline type="rss" text="Hacker News: Newest" title="Hacker News" xmlUrl="http://hnrss.org/newest?points=20" htmlUrl="https://news.ycombinator.com/newest"/>
+            <outline type="rss" text="Hacker News: Newest" title="Hacker News" xmlUrl="http://hnrss.org/newest?points=30" htmlUrl="https://news.ycombinator.com/newest"/>
         </outline>
         <outline text="Trips" title="Trips">
             <outline type="rss" text="Расследования авиакатастроф" title="Расследования авиакатастроф" xmlUrl="https://tg2rss.xyz/channel/?name=rumayday" htmlUrl="https://t.me/rumayday"/>
-            <outline type="rss" text="Atlas Obscura" title="Atlas Obscura" xmlUrl="http://www.atlasobscura.com/feeds/latest" htmlUrl="https://www.atlasobscura.com"/>
             <outline type="rss" text="34travel.me" title="34travel.me" xmlUrl="https://34travel.me/feed" htmlUrl="https://34travel.me/"/>
             <outline type="rss" text="Perito Burrito" title="Perito Burrito" xmlUrl="http://perito-burrito.com/feed" htmlUrl="http://perito-burrito.com/"/>
         </outline>
