@@ -48,7 +48,6 @@ func Updater(ctx context.Context, parsed <-chan entity.Article) {
 func RunParser(ctx context.Context, source entity.Source, output chan<- entity.Article) {
 	feedLogger := log.WithField("Feed", source.RSS)
 
-	updated := time.Now().Add(-time.Second * 3600 * 24 * 15)
 	timeout := time.Second * 60 * 3
 
 	ticker := time.NewTicker(timeout)
@@ -57,21 +56,17 @@ func RunParser(ctx context.Context, source entity.Source, output chan<- entity.A
 	var errCount = 0
 
 	for {
-		articles, err := parse(source, updated)
+		articles, err := parse(source)
 		if err != nil {
 			errCount++
-			log.Debug(err)
-		}
-		if errCount > 10 {
 			log.Error(err)
-			break
+			if errCount > 10 {
+				break
+			}
 		}
 
 		for _, article := range articles {
 			output <- article
-			if article.Data.After(updated.Add(time.Second)) {
-				updated = article.Data
-			}
 		}
 
 		plannedParsingTime := time.Now().Add(timeout)
@@ -82,7 +77,7 @@ func RunParser(ctx context.Context, source entity.Source, output chan<- entity.A
 			feedLogger.Info("Stop signal received. Stopping...")
 			return
 		case <-ticker.C:
-			feedLogger.WithField("Last updated", updated).Debug("Fetching new articles")
+			feedLogger.Debug("Fetching new articles")
 		}
 	}
 	feedLogger.Info("Parsing is stopped")
@@ -93,7 +88,7 @@ func GetAdditionalInformation(article entity.Article) entity.Article {
 	return article
 }
 
-func parse(source entity.Source, updated time.Time) ([]entity.Article, error) {
+func parse(source entity.Source) ([]entity.Article, error) {
 	var parserArticles []entity.Article
 
 	feedLogger := log.WithField("Feed", source.RSS)
@@ -106,11 +101,6 @@ func parse(source entity.Source, updated time.Time) ([]entity.Article, error) {
 	feedLogger.Debug("RSS url was fetched")
 
 	for _, item := range feed.Items {
-		if item.PublishedParsed.Before(updated.Add(time.Second)) {
-			feedLogger.Debug("Reached already parsed news.")
-			break
-		}
-
 		article := entity.Article{
 			Title:    item.Title,
 			Link:     item.Link,
