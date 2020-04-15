@@ -26,6 +26,8 @@ header .passive {
 
 main {
     grid-area: main;
+    padding-right: 100px;
+    box-sizing: border-box;
 }
 
 main section {
