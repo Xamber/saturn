@@ -15,43 +15,45 @@ import (
 	"time"
 )
 
+const postgresAddr = "postgres:5432"
+const postgresUser = "postgres"
+const postgresPassword = "postgres"
+const postgresDB = "postgres"
+
 func main() {
 	var sources []entity.Source
 
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 
-	stopChannel := make(chan os.Signal, 1)
+	stopChannel := make(chan os.Signal)
 	signal.Notify(stopChannel, syscall.SIGTERM)
 	signal.Notify(stopChannel, syscall.SIGINT)
 
 	articles := make(chan entity.Article)
 
-	time.Sleep(4 * time.Second)
+	time.Sleep(5 * time.Second)
 
-	database.Connect("postgres:5432", "postgres", "postgres", "postgres")
+	database.Connect(postgresAddr, postgresUser, postgresPassword, postgresDB)
 
 	err := database.CreateTables()
 	if err != nil {
-		log.Error(err)
-		os.Exit(1)
+		log.Fatal(err)
 	}
 
 	currentDir, err := os.Getwd()
 	feedsPath := filepath.Join(currentDir, "feeds.opml")
-
 	sources = opml.FromFile(feedsPath)
 	err = database.CompleteSourcesList(sources)
 	if err != nil {
-		log.Error(err)
-		os.Exit(1)
+		log.Fatal(err)
 	}
 
 	sources, err = database.GetAllSources()
 	if err != nil {
-		log.Error(err)
-		os.Exit(1)
+		log.Fatal(err)
 	}
+
 	parser.Manager(ctx, sources, articles)
 
 	go web.Serve(ctx)
@@ -59,11 +61,11 @@ func main() {
 	for {
 		select {
 		case <-ctx.Done():
-			log.Println("Trying to make graceful stop..")
+			log.Println("Waiting for graceful stop..")
 			time.Sleep(3 * time.Second)
 			return
 		case <-stopChannel:
-			log.Println("Stopping the context")
+			log.Println("Application was interapted by user")
 			go database.Disconnect()
 			go cancel()
 		}
