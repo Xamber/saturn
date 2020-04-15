@@ -17,6 +17,7 @@
             <outline type="rss" text="Bubuk" title="Bubuk" xmlUrl="https://tg2rss.xyz/channel/?name=addmeto" htmlUrl="https://t.me/addmeto"/>
             <outline type="rss" text="Пока завод не починили" title="Пока завод не починили" xmlUrl="https://tg2rss.xyz/channel/?name=jejeya_pictures" htmlUrl="https://t.me/jejeya_pictures"/>
             <outline type="rss" text="vas3k" title="vas3k" xmlUrl="https://vas3k.ru/rss/" htmlUrl="https://vas3k.ru"/>
+            <outline type="rss" text="Torshina" title="Torshina" xmlUrl="https://torshina.me/feed.rss" htmlUrl="https://torshina.me/"/>
         </outline>
         <outline text="Компании" title="Компании">
             <outline type="rss" text="Stack Overflow Blog" title="Stack Overflow Blog" xmlUrl="http://blog.stackoverflow.com/feed/" htmlUrl="https://stackoverflow.blog"/>
@@ -24,13 +25,14 @@
             <outline type="rss" text="YouTube Blog" title="YouTube Blog" xmlUrl="https://youtube.googleblog.com/feeds/posts/default?alt=rss" htmlUrl="http://youtube.googleblog.com/"/>
             <outline type="rss" text="Facebook Engineering" title="Facebook Engineering" xmlUrl="https://code.facebook.com/posts/rss" htmlUrl="https://engineering.fb.com"/>
             <outline type="rss" text="Stories by Skyscanner Engineering on Medium" title="Skyscanner Engineering" xmlUrl="https://medium.com/feed/@SkyscannerEng" htmlUrl="https://medium.com/@SkyscannerEng?source=rss-401f3b3c958f------2"/>
-            <outline type="rss" text="Netflix TechBlog " title="Netflix TechBlog - Medium" xmlUrl="http://techblog.netflix.com/feeds/posts/default" htmlUrl="https://netflixtechblog.com?source=rss----2615bd06b42e---4"/>
+            <outline type="rss" text="Netflix TechBlog " title="Netflix TechBlog - Medium" xmlUrl="https://medium.com/feed/netflix-techblog" htmlUrl="https://medium.com/netflix-techblog"/>
             <outline type="rss" text="Google Russia" title="Google Russia" xmlUrl="http://googlerussiablog.blogspot.com/atom.xml" htmlUrl="http://russia.googleblog.com/"/>
             <outline type="rss" text="Uber Engineering" title="Uber Engineering" xmlUrl="https://eng.uber.com/feed/" htmlUrl="https://eng.uber.com"/>
             <outline type="rss" text="LinkedIn Engineering" title="LinkedIn Engineering" xmlUrl="https://engineering.linkedin.com/blog.rss" htmlUrl="https://engineering.linkedin.com/blog.rss.html"/>
             <outline type="rss" text="Sentry" title="Sentry" xmlUrl="https://blog.sentry.io/feed.xml" htmlUrl="https://blog.sentry.io"/>
             <outline type="rss" text="The GitHub" title="GitHub" xmlUrl="https://github.com/blog/all.atom" htmlUrl="https://github.blog"/>
             <outline type="rss" text="Docker" title="Docker" xmlUrl="http://blog.docker.io/feed/" htmlUrl="https://www.docker.com/blog"/>
+            <outline type="rss" text="Microsoft" title="Microsoft" xmlUrl="https://www.microsoft.com/en-us/research/feed/" htmlUrl="https://www.microsoft.com/en-us/research/"/>
             <outline type="rss" text="Rust" title="Rust" xmlUrl="http://blog.rust-lang.org/feed.xml" htmlUrl="https://blog.rust-lang.org/"/>
             <outline type="rss" text="Airbnb Engineering &amp; Data Science - Medium" title="Airbnb Engineering &amp; Data Science - Medium" xmlUrl="https://medium.com/feed/airbnb-engineering" htmlUrl="https://medium.com/airbnb-engineering?source=rss----53c7c27702d5---4"/>
             <outline type="rss" text="Instagram Engineering - Medium" title="Instagram Engineering" xmlUrl="https://engineering.instagram.com/feed" htmlUrl="https://instagram-engineering.com?source=rss----37dc2a3034f2---4"/>
@@ -41,7 +43,8 @@
             <outline type="rss" text="Labs" title="Labs" xmlUrl="http://labs.spotify.com/feed/" htmlUrl="https://labs.spotify.com"/>
             <outline type="rss" text="Блог Яндекса" title="Яндекс" xmlUrl="http://clubs.ya.ru/company/rss/posts.xml" htmlUrl="http://yandex.ru/blog/company"/>
             <outline type="rss" text="The Go Programming Language Blog" title="The Go Programming Language" xmlUrl="http://blog.golang.org/feeds/posts/default" htmlUrl="http://blog.golang.org/"/>
-            <outline type="rss" text="Several People Are Coding - Medium" title="Slack" xmlUrl="https://slack.engineering/feed" htmlUrl="https://slack.engineering?source=rss----58820b6d8904---4"/>
+            <outline type="rss" text="Several People Are Coding - Medium" title="Slack" xmlUrl="https://slack.engineering/feed" htmlUrl="https://slack.engineering?source=rss"/>
+            <outline type="rss" text="Ebay" title="Slack" xmlUrl="http://www.ebaytechblog.com/feed/" htmlUrl="http://www.ebaytechblog.com"/>
         </outline>
         <outline text="Journal" title="Journal">
             <outline type="rss" text="TJ: популярное" title="TJ" xmlUrl="https://tjournal.ru/rss/all" htmlUrl="https://tjournal.ru/"/>
