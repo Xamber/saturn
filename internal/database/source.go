@@ -30,11 +30,7 @@ func GetAllSources() (sources []entity.Source, err error) {
 	return sources, err
 }
 
-func GetSourcesByGroup(group string) ([]entity.Source, error) {
-	var sources []entity.Source
-	err := Database.Model(&sources).Where("source.group = ?", group).Order("name DESC").Select()
-	if err != nil {
-		return sources, err
-	}
+func GetSourcesByGroup(group string) (sources []entity.Source, err error) {
+	err = Database.Model(&sources).Where("source.group = ?", group).Order("name DESC").Select()
 	return sources, nil
 }

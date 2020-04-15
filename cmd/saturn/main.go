@@ -5,7 +5,7 @@ import (
 	log "github.com/sirupsen/logrus"
 	"github.com/xamber/saturn/internal/database"
 	"github.com/xamber/saturn/internal/entity"
-	"github.com/xamber/saturn/internal/opml-parser"
+	"github.com/xamber/saturn/internal/opml"
 	"github.com/xamber/saturn/internal/parser"
 	"github.com/xamber/saturn/internal/web"
 	"os"
@@ -40,7 +40,7 @@ func main() {
 	currentDir, err := os.Getwd()
 	feedsPath := filepath.Join(currentDir, "feeds.opml")
 
-	sources = opml_parser.GetSourcesFromFile(feedsPath)
+	sources = opml.FromFile(feedsPath)
 	err = database.CompleteSourcesList(sources)
 	if err != nil {
 		log.Error(err)

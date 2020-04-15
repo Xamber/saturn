@@ -9,7 +9,7 @@ OPML files, as defined by the specification of the OPML format:
 	[OPML 2.0] http://dev.opml.org/spec2.html
 It is able to parse both, OPML 1.0 and OPML 2.0, files.
 */
-package opml_parser
+package opml
 
 import (
 	"encoding/xml"
