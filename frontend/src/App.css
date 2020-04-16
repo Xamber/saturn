@@ -15,7 +15,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 5fr 6fr;
     grid-template-rows: auto;
-    grid-template-areas: "sidebar main main" "about about about";
+    grid-template-areas: "sidebar main main" ". footer footer";
 }
 
 .hidden {
