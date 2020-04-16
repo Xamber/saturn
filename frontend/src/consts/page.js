@@ -4,7 +4,10 @@ import Topic from "../components/Topic/topic";
 import scienceIcon from "./../assets/science.svg";
 import tripIcon from "./../assets/plane.svg";
 import techNewsIcon from "./../assets/radio.svg";
-import techJournalIcon from "./../assets/idea.svg";
+import techEnglishIcon from "./../assets/cat.svg";
+import techRussianIcon from "./../assets/balalaika.svg";
+import intertamentIcon from "./../assets/cinema.svg";
+import lobbyIcon from "./../assets/lobby.svg";
 import russiaIcon from "./../assets/Russia.svg";
 import workIcon from "./../assets/work.svg";
 import peopleIcon from "./../assets/people.svg";
@@ -29,16 +32,34 @@ let technews = {
     view: <Topic name={"Технологии (News)"}/>
 };
 
-let techjournal = {
-    name: "Technology Journal",
-    img: techJournalIcon,
-    view: <Topic name={"Технологии (Magazine)"}/>
+let techjournalenglish = {
+    name: "Technology Journal - English",
+    img: techEnglishIcon,
+    view: <Topic name={"Технологии (English)"}/>
+};
+
+let techjournalrussian = {
+    name: "Technology Journal - Russian",
+    img: techRussianIcon,
+    view: <Topic name={"Технологии (Russian)"}/>
+};
+
+let intertament = {
+    name: "Intertaiment",
+    img: intertamentIcon,
+    view: <Topic name={"Intertaiment"}/>
+};
+
+let lobby = {
+    name: "Lobby",
+    img: lobbyIcon,
+    view: <Topic name={"Lobby"}/>
 };
 
 let russia = {
     name: "Russian Articles",
     img: russiaIcon,
-    view: <Topic name={"Journal"}/>
+    view: <Topic name={"Russia"}/>
 };
 
 let science = {
@@ -59,6 +80,6 @@ let iceland = {
     view: <Topic name={"Iceland"}/>
 };
 
-const Page = [technews, companies, science, trips, people, techjournal, russia, iceland];
+const Page = [technews, companies, science, trips, people, techjournalenglish, techjournalrussian, intertament, russia, iceland, lobby];
 
 export default Page;
