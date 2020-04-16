@@ -1,6 +1,5 @@
 import React from "react";
 import Topic from "../components/Topic/topic";
-import About from "../components/About/about";
 
 import scienceIcon from "./../assets/science.svg";
 import tripIcon from "./../assets/plane.svg";
@@ -10,7 +9,6 @@ import russiaIcon from "./../assets/Russia.svg";
 import workIcon from "./../assets/work.svg";
 import peopleIcon from "./../assets/people.svg";
 import vikingIcon from "./../assets/viking.svg";
-import aboutIcon from "./../assets/question.svg";
 
 
 let companies = {
@@ -61,13 +59,6 @@ let iceland = {
     view: <Topic name={"Iceland"}/>
 };
 
-let about = {
-    name: "About",
-    img: aboutIcon,
-    view: <About/>
-};
-
-
-const Page = [technews, companies, science, trips, people, techjournal, russia, iceland, about];
+const Page = [technews, companies, science, trips, people, techjournal, russia, iceland];
 
 export default Page;

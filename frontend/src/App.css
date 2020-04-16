@@ -1,20 +1,21 @@
+body {
+    margin: 0;
+}
+
 #root {
     margin: 0 auto;
     width: 1200px;
 }
 
-body {
+.app {
     font-family: 'Alegreya Sans', sans-serif;
     color: black;
     font-size: 18px;
-    margin: 0;
-}
 
-.app {
     display: grid;
-    grid-template-columns: 1fr 1fr 12fr;
+    grid-template-columns: 1fr 5fr 6fr;
     grid-template-rows: auto;
-    grid-template-areas: ". sidebar main ";
+    grid-template-areas: "sidebar main main" "about about about";
 }
 
 .hidden {
