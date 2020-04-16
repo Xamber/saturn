@@ -77,7 +77,7 @@
         <outline text="Intertaiment" title="Intertaiment">
             <outline type="rss" text="Disgusting Men" title="Disgusting Men" xmlUrl="https://disgustingmen.com/feed/" htmlUrl="https://disgustingmen.com"/>
             <outline type="rss" text="Kanobu" title="Kanobu" xmlUrl="https://kanobu.ru/rss/articles.xml" htmlUrl="https://kanobu.ru"/>
-            <outline type="rss" text="Zenit (Sports.ru)" title="Zenit (Sports.ru)" xmlUrl="https://www.sports.ru/rss/tags.xml?id=1044514" htmlUrl="https://www.sports.ru/zenit/"/>
+            <outline type="rss" text="FC Zenit" title="Zenit" xmlUrl="https://fc-zenit.ru/rss/allnews.rss" htmlUrl="https://fc-zenit.ru/"/>
         </outline>
         <outline text="Lobby" title="Lobby">
             <outline type="rss" text="Newochem" title="Newochem" xmlUrl="https://newochem.io/feed/" htmlUrl="https://newochem.io"/>
