@@ -14,12 +14,12 @@ const ArticleList = (props) => {
         let date = new Date(article.Data);
         let day = date.getUTCDate();
         let month = date.getMonth() + 1;
+        let year = date.getFullYear();
         if (day !== prevDay ) {
-            articles.push(<Divider day={`${day}.${month}` } key={'day:' + day} />)
+            articles.push(<Divider day={`${day}.${month}` } key={`${day}.${month}.${year}`} />)
         }
         articles.push(<Article key={article.Id} {...article} />);
         prevDay = day
-
     }
     return <div className={"group"}>
         <ul>{articles}</ul>
