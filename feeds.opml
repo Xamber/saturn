@@ -76,6 +76,7 @@
         </outline>
         <outline text="Intertaiment" title="Intertaiment">
             <outline type="rss" text="Disgusting Men" title="Disgusting Men" xmlUrl="https://disgustingmen.com/feed/" htmlUrl="https://disgustingmen.com"/>
+            <outline type="rss" text="Kanobu" title="Kanobu" xmlUrl="https://kanobu.ru/rss/articles.xml" htmlUrl="https://kanobu.ru"/>
         </outline>
         <outline text="Lobby" title="Lobby">
             <outline type="rss" text="Newochem" title="Newochem" xmlUrl="https://newochem.io/feed/" htmlUrl="https://newochem.io"/>
@@ -91,6 +92,14 @@
             <outline type="rss" text="Icelandmonitor" title="Iceland Monitor" xmlUrl="https://icelandmonitor.mbl.is/rss/" htmlUrl="https://icelandmonitor.mbl.is"/>
             <outline type="rss" text="vedur" title="Vedur" xmlUrl="https://en.vedur.is/about-imo/news/rss.xml" htmlUrl="https://en.vedur.is/"/>
             <outline type="rss" text="icelandreview" title="Iceland Review" xmlUrl="https://www.icelandreview.com/feed/" htmlUrl="https://www.icelandreview.com/"/>
+            <outline type="rss" text="Prime minister office" title="Prime minister office" xmlUrl="https://www.government.is/extensions/news/rss/Prime-minister-office.rss" htmlUrl="http://www.government.is"/>
+            <outline type="rss" text="Ministry of Transport and Local Government" title="Ministry of Transport and Local Government" xmlUrl="https://www.government.is/extensions/news/rss/Ministry-of-Transport-and-Local-Government.rss" htmlUrl="http://www.government.is"/>
+            <outline type="rss" text="Ministry-of-Health" title="Ministry-of-Health" xmlUrl="https://www.government.is/extensions/news/rss/Ministry-of-Health.rss" htmlUrl="http://www.government.is"/>
+            <outline type="rss" text="Ministry of Finance and Economic Affairs" title="Ministry of Finance and Economic Affairs" xmlUrl="https://www.government.is/extensions/news/rss/Ministry-of-Finance-and-Economic-Affairs.rss" htmlUrl="http://www.government.is"/>
+            <outline type="rss" text="Ministry of Education, Science and Culture" title="Ministry of Education, Science and Culture" xmlUrl="https://www.government.is/extensions/news/rss/Ministry-of-Education-Science-and-Culture.rss" htmlUrl="http://www.government.is"/>
+            <outline type="rss" text="Ministry for the Environment and Natural Resources" title="Ministry for the Environment and Natural Resources" xmlUrl="https://www.government.is/extensions/news/rss/Ministry-for-the-Environment-and-Natural-Resources.rss" htmlUrl="http://www.government.is"/>
+            <outline type="rss" text="Ministry for Foreign Affairs" title="Ministry for Foreign Affairs" xmlUrl="https://www.government.is/extensions/news/rss/Ministry-for-Foreign-Affairs.rss" htmlUrl="http://www.government.is"/>
+
         </outline>
     </body>
 </opml>
