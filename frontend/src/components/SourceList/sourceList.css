@@ -1,0 +1,16 @@
+.source-list {
+    max-width: 50%;
+    font-size: 16px;
+    color: grey;
+}
+
+.source-list a {
+    white-space: nowrap;
+    padding-right: 10px;
+    text-decoration: none;
+    color: #292929;
+}
+
+.source-list .icon {
+    max-height: 10px;
+}

@@ -4,7 +4,8 @@ import './App.css';
 import {Divider, Logo, Main, Sidebar, Footer} from "./components/Layout/layout";
 import MenuItem from "./components/MenuItem/menuItem";
 import ArticleList from "./components/ArticleList/articleList";
-import SourceList from "./components/SourceList/SourceList";
+import SourceList from "./components/SourceList/sourceList";
+import About from "./components/About/about";
 
 import scienceIcon from "./assets/science.svg";
 import tripIcon from "./assets/plane.svg";
@@ -17,22 +18,6 @@ import russiaIcon from "./assets/Russia.svg";
 import workIcon from "./assets/work.svg";
 import peopleIcon from "./assets/people.svg";
 import vikingIcon from "./assets/viking.svg";
-
-
-const About = () => <div className={"about"}>
-    <p>2020 &nbsp;
-    Created by Artem Filippov.&nbsp;
-    </p>
-    <p>
-    Inspired by&nbsp;
-    <a href="https://infomate.club/">infomate.club</a> from&nbsp;
-    <a href="https://vas3k.ru/">vas3k</a>
-    </p>
-    <p>
-    Sourse code is available on my Github: <a href="https://github.com/Xamber/saturn">Saturn</a>&nbsp;
-    LinkedIn: <a href="https://www.linkedin.com/in/artem-filippov-spb/">artem-filippov-spb</a> &nbsp;
-    </p>
-</div>;
 
 
 let topics = [
@@ -54,7 +39,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            active: topics[0].name,
+            active: "",
             articles: [],
             sources: [],
         };
@@ -120,7 +105,6 @@ class App extends React.Component {
                 </Sidebar>
                 <Main>
                     <ArticleList articlies={this.state.articles}/>
-                    <Divider maxWidth={"10%"}/>
                     <SourceList sources={this.state.sources}/>
                 </Main>
                 <Footer>

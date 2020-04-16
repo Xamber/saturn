@@ -1,5 +1,5 @@
 import React from "react";
-import "./SourceList.css";
+import "./sourceList.css";
 import {Icon} from "../Article/article"
 
 const Source = (props) => {
@@ -8,7 +8,13 @@ const Source = (props) => {
 
 const SourceList = (props) => {
     let sources = props.sources.map((source) => <Source key={source.Id} {...source} />);
-    return <div className={"source-list"}>{sources}</div>
+    return <div className={"source-list"}>
+        <p>
+            Sourses used on this page: <br/>
+            {sources}
+        </p>
+
+    </div>
 };
 
 export default SourceList;
