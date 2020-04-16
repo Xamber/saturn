@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import {Divider, Logo, Main, Sidebar, Footer} from "./components/Layout/layout";
-import MenuItem from "./components/MenuItem/menuItem";
+import {Logo, Main, Sidebar, Footer} from "./components/Layout/layout";
 import ArticleList from "./components/ArticleList/articleList";
 import SourceList from "./components/SourceList/sourceList";
 import About from "./components/About/about";
@@ -18,6 +17,7 @@ import russiaIcon from "./assets/Russia.svg";
 import workIcon from "./assets/work.svg";
 import peopleIcon from "./assets/people.svg";
 import vikingIcon from "./assets/viking.svg";
+import Menu from "./components/Menu/menu";
 
 
 let topics = [
@@ -74,6 +74,7 @@ class App extends React.Component {
     }
 
     changeTopic(topicName) {
+        console.log(topicName);
         this.setState({active: topicName}, () => {
             this.fetchArticles();
             this.fetchSources();
@@ -86,22 +87,11 @@ class App extends React.Component {
     }
 
     render() {
-        let Menu = [];
-
-        for (let item of topics) {
-            let menuItem = <MenuItem key={item.name} active={this.state.active === item.name} name={item.name}
-                                     img={item.img}
-                                     onClick={() => {
-                                         this.changeTopic(item.name)
-                                     }}/>;
-            Menu.push(menuItem);
-        }
-
         return (
             <div className="app">
                 <Sidebar>
                     <Logo />
-                    {Menu}
+                    <Menu topics={topics} active={this.state.active} callback={(name) => {this.changeTopic(name)}} />
                 </Sidebar>
                 <Main>
                     <ArticleList articlies={this.state.articles}/>
