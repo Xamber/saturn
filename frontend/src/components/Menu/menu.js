@@ -3,7 +3,6 @@ import React from "react";
 
 const Menu = function (props) {
     let menu = [];
-
     for (let item of props.topics) {
         let activeClass = props.active === item.name ? "active" : "passive";
         let callback = () => {props.callback.apply(null, [item.name])};
@@ -13,7 +12,6 @@ const Menu = function (props) {
         </div>;
         menu.push(menuItem);
     }
-
     return menu
 };
 

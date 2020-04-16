@@ -74,7 +74,6 @@ class App extends React.Component {
     }
 
     changeTopic(topicName) {
-        console.log(topicName);
         this.setState({active: topicName}, () => {
             this.fetchArticles();
             this.fetchSources();
