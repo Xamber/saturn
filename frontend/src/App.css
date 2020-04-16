@@ -18,6 +18,44 @@ body {
     grid-template-areas: "sidebar main main" ". footer footer";
 }
 
-.hidden {
-    display: none !important;
+
+/* Iphone XS */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) {
+    .app {
+        font-size: 20px;
+        grid-template-columns: 1fr 10fr 10fr;
+    }
+
+    #root {
+        margin: 0 0;
+        width: 100%;
+    }
+}
+
+/* Ipad */
+/* Portrait */
+@media only screen
+and (min-device-width: 834px)
+and (max-device-width: 834px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .app {
+        font-size: 24px;
+    }
+}
+
+/* Ipad */
+/* landscape */
+@media only screen
+and (min-device-width: 1112px)
+and (max-device-width: 1112px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .app {
+        font-size: 24px;
+    }
 }
