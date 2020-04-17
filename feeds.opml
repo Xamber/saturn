@@ -69,12 +69,14 @@
             <outline type="rss" text="Handpicked stories about Technology on Medium" title="Handpicked stories about Technology on Medium" xmlUrl="https://medium.com/feed/topic/technology" htmlUrl="https://medium.com/topic/technology?source=rss-------8-----------------technology"/>
             <outline type="rss" text="The Information" title="The Information" xmlUrl="http://www.theinformation.com/feed" htmlUrl="https://www.theinformation.com"/>
             <outline type="rss" text="Hacker Noon" title="Hacker Noon" xmlUrl="https://hackernoon.com/feed" htmlUrl="http://github.com/dylang/node-rss"/>
+            <outline type="rss" text="The Wired" title="The Wired" xmlUrl="https://www.wired.com/feed/rss" htmlUrl="https://www.wired.com"/>
+            <outline type="rss" text="NYT Technology" title="NYT Technology" xmlUrl="https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/technology/rss.xml" htmlUrl="https://www.nytimes.com/section/technology"/>
         </outline>
         <outline text="Технологии (Russian)" title="Технологии (Russian)">
             <outline type="rss" text="Habr" title="Habr" xmlUrl="https://habr.com/ru/rss/best/daily/?fl=ru" htmlUrl="https://habr.com/"/>
             <outline type="rss" text="Журнал «Хакер»" title="Журнал «Хакер»" xmlUrl="http://feeds.feedburner.com/xakep/all" htmlUrl="https://xakep.ru"/>
         </outline>
-        <outline text="Intertaiment" title="Intertaiment">
+        <outline text="Entertainment" title="Entertainment">
             <outline type="rss" text="Disgusting Men" title="Disgusting Men" xmlUrl="https://disgustingmen.com/feed/" htmlUrl="https://disgustingmen.com"/>
             <outline type="rss" text="Kanobu" title="Kanobu" xmlUrl="https://kanobu.ru/rss/articles.xml" htmlUrl="https://kanobu.ru"/>
             <outline type="rss" text="FC Zenit" title="Zenit" xmlUrl="https://fc-zenit.ru/rss/allnews.rss" htmlUrl="https://fc-zenit.ru/"/>

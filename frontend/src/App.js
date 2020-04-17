@@ -11,7 +11,7 @@ import tripIcon from "./assets/plane.svg";
 import techNewsIcon from "./assets/radio.svg";
 import techEnglishIcon from "./assets/cat.svg";
 import techRussianIcon from "./assets/balalaika.svg";
-import intertamentIcon from "./assets/cinema.svg";
+import entertamentIcon from "./assets/cinema.svg";
 import lobbyIcon from "./assets/lobby.svg";
 import russiaIcon from "./assets/Russia.svg";
 import workIcon from "./assets/work.svg";
@@ -21,17 +21,17 @@ import Menu from "./components/Menu/menu";
 
 
 let topics = [
-    {name: "Технологии (News)", img: techNewsIcon},
-    {name: "Компании", img: workIcon},
-    {name: "Люди", img: peopleIcon},
-    {name: "Science", img: scienceIcon},
-    {name: "Технологии (English)", img: techEnglishIcon},
-    {name: "Технологии (Russian)", img: techRussianIcon},
-    {name: "Trips", img: tripIcon},
-    {name: "Intertaiment", img: intertamentIcon},
-    {name: "Russia", img: russiaIcon},
-    {name: "Iceland", img: vikingIcon},
-    {name: "Lobby", img: lobbyIcon},
+    {name: "Технологии (News)", img: techNewsIcon, desc: "Latest news in tech world from aggregators"},
+    {name: "Компании", img: workIcon, desc: "Big companies tech blogs"},
+    {name: "Люди", img: peopleIcon, desc: "People blogs"},
+    {name: "Science", img: scienceIcon, desc: "Science articles from top Russian education sites"},
+    {name: "Технологии (English)", img: techEnglishIcon, desc: "Tech articles from english portals"},
+    {name: "Технологии (Russian)", img: techRussianIcon, desc: "Tech articles on russian"},
+    {name: "Trips", img: tripIcon, desc: "Travel news and articles"},
+    {name: "Entertainment", img: entertamentIcon, desc: "News about films and games"},
+    {name: "Russia", img: russiaIcon, desc: "Russian news radar"},
+    {name: "Iceland", img: vikingIcon, desc: "Iceland news and official statements"},
+    {name: "Lobby", img: lobbyIcon, desc: "Sources without topic"},
 ];
 
 

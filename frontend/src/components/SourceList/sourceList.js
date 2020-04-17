@@ -8,8 +8,10 @@ const Source = (props) => {
 
 const SourceList = (props) => {
     let sources = props.sources.map((source) => <Source key={source.Id} {...source} />);
+    let desc = props.desc;
     return <div className={"source-list"}>
         <p>
+            {desc}
             Sourses used on this page: <br/>
             {sources}
         </p>
