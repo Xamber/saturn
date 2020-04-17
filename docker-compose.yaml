@@ -33,10 +33,13 @@ services:
       dockerfile: Dockerfile
     ports:
       - 80:80
+      - 443:443
     depends_on:
       - saturn
     networks:
       - orbit
+    volumes:
+    - ~/ssl/:/etc/nginx/certs/
 
 networks:
   orbit:
