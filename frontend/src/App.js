@@ -39,7 +39,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            active: "",
+            active: topics[0],
             articles: [],
             sources: [],
         };
@@ -47,7 +47,7 @@ class App extends React.Component {
 
     fetchArticles() {
         let api = "/topic?name=";
-        fetch(api + this.state.active)
+        fetch(api + this.state.active.name)
             .then(res => res.json())
             .then(
                 (result) => {
@@ -61,7 +61,7 @@ class App extends React.Component {
 
     fetchSources() {
         let api = "/sources?name=";
-        fetch(api + this.state.active)
+        fetch(api + this.state.active.name)
             .then(res => res.json())
             .then(
                 (result) => {
@@ -73,15 +73,15 @@ class App extends React.Component {
             );
     }
 
-    changeTopic(topicName) {
-        this.setState({active: topicName}, () => {
+    changeTopic(topic) {
+        this.setState({active: topic}, () => {
             this.fetchArticles();
             this.fetchSources();
         });
     }
 
     componentDidMount() {
-        let initialTopic = topics[0].name;
+        let initialTopic = topics[0];
         this.changeTopic(initialTopic);
     }
 
@@ -90,11 +90,11 @@ class App extends React.Component {
             <div className="app">
                 <Sidebar>
                     <Logo />
-                    <Menu topics={topics} active={this.state.active} callback={(name) => {this.changeTopic(name)}} />
+                    <Menu topics={topics} active={this.state.active.name} callback={(topic) => {this.changeTopic(topic)}} />
                 </Sidebar>
                 <Main>
                     <ArticleList articlies={this.state.articles}/>
-                    <SourceList sources={this.state.sources}/>
+                    <SourceList sources={this.state.sources} desc={this.state.active.desc}/>
                 </Main>
                 <Footer>
                     <About />
