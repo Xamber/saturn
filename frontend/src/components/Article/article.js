@@ -1,8 +1,6 @@
 import React from "react";
 import "./article.css";
 
-import timeSince from "../../utils/timeSince";
-
 const FaviconBase = "https://www.google.com/s2/favicons?domain=";
 
 const Icon = (props) => {
@@ -18,10 +16,13 @@ const Icon = (props) => {
 
 const Link = (props) => <a target="_blank" rel="noopener noreferrer" href={props.link}>{props.title}</a>;
 
-const Hint = (props) => <span className={"hint"}>
-    <span className={"time"}> {timeSince(props.time)} ago by </span>
+const Hint = (props) => {
+    let time = new Date(props.time);
+    return <span className={"hint"}>
+    <span className={"time"}> {`${time.toLocaleTimeString()}`} by </span>
     <span className={"source"}><a href={props.website}>{props.title}</a></span>
 </span>;
+};
 
 const Article = (article) => <li className="article">
     <Icon title={article.Title} link={article.Link}/>
