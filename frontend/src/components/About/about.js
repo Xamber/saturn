@@ -10,7 +10,7 @@ const About = () => <div className={"about"}>
         <a href="https://vas3k.ru/">vas3k</a>.
     </p>
     <p>
-        Sourse code is available on my Github: <a href="https://github.com/Xamber/saturn">Saturn</a>&nbsp;
+        Sources code is available on my Github: <a href="https://github.com/Xamber/saturn">Saturn</a>&nbsp;
         LinkedIn: <a href="https://www.linkedin.com/in/artem-filippov-spb/">artem-filippov-spb</a> &nbsp;
     </p>
 </div>;
