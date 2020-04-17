@@ -18,9 +18,11 @@ const Link = (props) => <a target="_blank" rel="noopener noreferrer" href={props
 
 const Hint = (props) => {
     let time = new Date(props.time);
+    let hours = (time.getHours()<10 ? '0' : '') + time.getHours();
+    let minutes = (time.getMinutes()<10 ? '0': '') + time.getMinutes();
     return <span className={"hint"}>
-    <span className={"time"}> {`${time.toLocaleTimeString()}`} by </span>
-    <span className={"source"}><a href={props.website}>{props.title}</a></span>
+    <span className={"time"}> {`${hours}:${minutes}`} by </span>
+    <span className={"source"}><a href={props.website}><Icon link={props.website}/> {props.title}</a></span>
 </span>;
 };
 

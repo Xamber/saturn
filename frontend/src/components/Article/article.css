@@ -25,6 +25,10 @@ li.article .source {
     color: gray;
 }
 
+li.article .icon {
+    max-height: 10px;
+}
+
 li.article:hover .source {
     display: inline;
 }
