@@ -24,6 +24,8 @@ and (orientation: portrait) {
     .source-list {
         max-width: 250px;
         font-size: 10px;
+        white-space: pre-wrap;
+        display: inline-block
     }
 
     .source-list .icon {

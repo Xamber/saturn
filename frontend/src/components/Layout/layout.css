@@ -77,4 +77,7 @@ and (orientation: portrait) {
         box-sizing: content-box;
         padding-left: 2px;
     }
+    footer {
+        font-size: 10px;
+    }
 }
