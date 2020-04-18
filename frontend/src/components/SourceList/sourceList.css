@@ -14,3 +14,19 @@
 .source-list .icon {
     max-height: 10px;
 }
+
+/* Iphone XS */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) {
+    .source-list {
+        max-width: 250px;
+        font-size: 10px;
+    }
+
+    .source-list .icon {
+        max-height: 6px;
+    }
+}

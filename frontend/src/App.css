@@ -27,13 +27,16 @@ and (-webkit-min-device-pixel-ratio: 3)
 and (orientation: portrait) {
     .app {
         font-size: 20px;
-        grid-template-columns: 1fr 10fr 10fr;
+        grid-template-columns: 10fr 10fr;
+        grid-template-rows: auto;
+        grid-template-areas: "sidebar sidebar" "main main" "footer footer";
     }
 
     #root {
         margin: 0 0;
         width: 100%;
     }
+
 }
 
 /* Ipad */

@@ -40,7 +40,11 @@ and (max-device-width: 812px)
 and (-webkit-min-device-pixel-ratio: 3)
 and (orientation: portrait) {
     li.article .icon  {
-        max-height: 10px;
+        max-height: 13px;
+        padding-right: 3px;
+    }
+    li.article > a {
+        margin-left: 2px;
     }
 }
 
