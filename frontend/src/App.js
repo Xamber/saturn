@@ -11,6 +11,7 @@ import tripIcon from "./assets/plane.svg";
 import techNewsIcon from "./assets/radio.svg";
 import techEnglishIcon from "./assets/cat.svg";
 import techRussianIcon from "./assets/balalaika.svg";
+import ideaIcon from "./assets/idea.svg";
 import entertamentIcon from "./assets/cinema.svg";
 import lobbyIcon from "./assets/lobby.svg";
 import russiaIcon from "./assets/Russia.svg";
@@ -27,6 +28,7 @@ let topics = [
     {name: "Science", img: scienceIcon, desc: "Science articles"},
     {name: "Технологии (English)", img: techEnglishIcon, desc: "Tech articles in english"},
     {name: "Технологии (Russian)", img: techRussianIcon, desc: "Tech articles in russian"},
+    {name: "Idea", img: ideaIcon, desc: "Start ups and pets projects"},
     {name: "Trips", img: tripIcon, desc: "Travel news"},
     {name: "Entertainment", img: entertamentIcon, desc: "News about films and games"},
     {name: "Russia", img: russiaIcon, desc: "Russian news"},

@@ -24,6 +24,8 @@
             <outline type="rss" text="Пока завод не починили" title="Пока завод не починили" xmlUrl="https://tg2rss.xyz/channel/?name=jejeya_pictures" htmlUrl="https://t.me/jejeya_pictures"/>
             <outline type="rss" text="vas3k" title="vas3k" xmlUrl="https://vas3k.ru/rss/" htmlUrl="https://vas3k.ru"/>
             <outline type="rss" text="Torshina" title="Torshina" xmlUrl="https://torshina.me/feed.rss" htmlUrl="https://torshina.me/"/>
+            <outline type="rss" text="Launch Tomorrow" title="Launch Tomorrow" xmlUrl="https://tg2rss.xyz/channel/?name=ctodaily" htmlUrl="https://t.me/ctodaily"/>
+            <outline type="rss" text="Сталингулаг" title="Сталингулаг" xmlUrl="https://tg2rss.xyz/channel/?name=stalin_gulag" htmlUrl="https://t.me/stalin_gulag"/>
         </outline>
         <outline text="Компании" title="Компании">
             <outline type="rss" text="Stack Overflow Blog" title="Stack Overflow Blog" xmlUrl="http://blog.stackoverflow.com/feed/" htmlUrl="https://stackoverflow.blog"/>
@@ -75,11 +77,18 @@
         <outline text="Технологии (Russian)" title="Технологии (Russian)">
             <outline type="rss" text="Habr" title="Habr" xmlUrl="https://habr.com/ru/rss/best/daily/?fl=ru" htmlUrl="https://habr.com/"/>
             <outline type="rss" text="Журнал «Хакер»" title="Журнал «Хакер»" xmlUrl="http://feeds.feedburner.com/xakep/all" htmlUrl="https://xakep.ru"/>
+            <outline type="rss" text="4gophers" title="4gophers" xmlUrl="https://tg2rss.xyz/channel/?name=gophernews" htmlUrl="https://t.me/gophernews"/>
         </outline>
         <outline text="Entertainment" title="Entertainment">
             <outline type="rss" text="Disgusting Men" title="Disgusting Men" xmlUrl="https://disgustingmen.com/feed/" htmlUrl="https://disgustingmen.com"/>
             <outline type="rss" text="Kanobu" title="Kanobu" xmlUrl="https://kanobu.ru/rss/articles.xml" htmlUrl="https://kanobu.ru"/>
             <outline type="rss" text="FC Zenit" title="Zenit" xmlUrl="https://fc-zenit.ru/rss/allnews.rss" htmlUrl="https://fc-zenit.ru/"/>
+        </outline>
+        <outline text="Idea" title="Idea">
+            <outline type="rss" text="Project Hunt" title="Project Hunt" xmlUrl="https://www.producthunt.com/feed" htmlUrl="https://www.producthunt.com"/>
+            <outline type="rss" text="Kicktraq (Close)" title="Kicktraq" xmlUrl="https://www.kicktraq.com/rss/soclose-latest.rss" htmlUrl="https://www.kicktraq.com"/>
+            <outline type="rss" text="Kicktraq (Day One)" title="Kicktraq" xmlUrl="https://www.kicktraq.com/rss/dayones-latest.rss" htmlUrl="https://www.kicktraq.com"/>
+            <outline type="rss" text="Show NN" title="Show NN" xmlUrl="https://hnrss.org/show?points=3" htmlUrl="https://news.ycombinator.com/show"/>
         </outline>
         <outline text="Lobby" title="Lobby">
             <outline type="rss" text="Newochem" title="Newochem" xmlUrl="https://newochem.io/feed/" htmlUrl="https://newochem.io"/>
@@ -87,12 +96,14 @@
         </outline>
         <outline text="Trips" title="Trips">
             <outline type="rss" text="Расследования авиакатастроф" title="Расследования авиакатастроф" xmlUrl="https://tg2rss.xyz/channel/?name=rumayday" htmlUrl="https://t.me/rumayday"/>
+            <outline type="rss" text="emigrantschannel" title="emigrantschannel" xmlUrl="https://tg2rss.xyz/channel/?name=emigrantschannel" htmlUrl="https://t.me/emigrantschannel"/>
+            <outline type="rss" text="travelhacks" title="travelhacks" xmlUrl="https://tg2rss.xyz/channel/?name=travelhacks" htmlUrl="https://t.me/travelhacks"/>
             <outline type="rss" text="34travel.me" title="34travel.me" xmlUrl="https://34travel.me/feed" htmlUrl="https://34travel.me/"/>
             <outline type="rss" text="Perito Burrito" title="Perito Burrito" xmlUrl="http://perito-burrito.com/feed" htmlUrl="http://perito-burrito.com/"/>
             <outline type="rss" text="Traveling.by" title="Traveling.by" xmlUrl="https://traveling.by/rss" htmlUrl="https://traveling.by"/>
         </outline>
         <outline text="Iceland" title="Iceland">
-            <outline type="rss" text="grapevine" title="Reykjavik Grapevine" xmlUrl="https://grapevine.is/feed/" htmlUrl="https://grapevine.is"/>
+            <outline type="rss" text="rus.is" title="rus.is" xmlUrl="https://rus.is/feed/" htmlUrl="https://rus.is/"/>
             <outline type="rss" text="Icelandmonitor" title="Iceland Monitor" xmlUrl="https://icelandmonitor.mbl.is/rss/" htmlUrl="https://icelandmonitor.mbl.is"/>
             <outline type="rss" text="vedur" title="Vedur" xmlUrl="https://en.vedur.is/about-imo/news/rss.xml" htmlUrl="https://en.vedur.is/"/>
             <outline type="rss" text="icelandreview" title="Iceland Review" xmlUrl="https://www.icelandreview.com/feed/" htmlUrl="https://www.icelandreview.com/"/>
