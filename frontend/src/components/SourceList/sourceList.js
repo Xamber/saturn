@@ -14,7 +14,7 @@ const SourceList = (props) => {
             Topic is <b>{desc.toLowerCase()}</b> <br/>
         </p>
         <p>
-            <div>Sourses used on this page: <br/></div>
+            <span>Sourses used on this page: <br/></span>
             {sources}
         </p>
 

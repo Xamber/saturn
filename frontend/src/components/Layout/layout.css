@@ -5,7 +5,6 @@ header {
     align-items: flex-end;
     justify-content: flex-start;
     margin-bottom: 20px;
-    padding-right: 10px;
     text-align: end;
 }
 
@@ -15,6 +14,11 @@ header img {
 
 header .passive {
     filter: grayscale(100%);
+    padding-right: 7px
+}
+
+header .active {
+    padding-right: 7px
 }
 
 main {
