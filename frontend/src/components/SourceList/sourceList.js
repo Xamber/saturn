@@ -11,8 +11,10 @@ const SourceList = (props) => {
     let desc = props.desc;
     return <div className={"source-list"}>
         <p>
-            Page contains {desc.toLowerCase()} <br/>
-            Sourses used on this page: <br/>
+            Topic is <b>{desc.toLowerCase()}</b> <br/>
+        </p>
+        <p>
+            <div>Sourses used on this page: <br/></div>
             {sources}
         </p>
 

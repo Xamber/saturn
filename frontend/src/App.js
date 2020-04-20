@@ -22,16 +22,16 @@ import Menu from "./components/Menu/menu";
 
 let topics = [
     {name: "Технологии (News)", img: techNewsIcon, desc: "Latest news in tech world from aggregators"},
-    {name: "Компании", img: workIcon, desc: "Big companies tech blogs"},
+    {name: "Компании", img: workIcon, desc: "Tech blogs from companies "},
     {name: "Люди", img: peopleIcon, desc: "People blogs"},
-    {name: "Science", img: scienceIcon, desc: "Science articles from top Russian education sites"},
-    {name: "Технологии (English)", img: techEnglishIcon, desc: "Tech articles from english portals"},
-    {name: "Технологии (Russian)", img: techRussianIcon, desc: "Tech articles on russian"},
-    {name: "Trips", img: tripIcon, desc: "Travel news and articles"},
+    {name: "Science", img: scienceIcon, desc: "Science articles"},
+    {name: "Технологии (English)", img: techEnglishIcon, desc: "Tech articles in english"},
+    {name: "Технологии (Russian)", img: techRussianIcon, desc: "Tech articles in russian"},
+    {name: "Trips", img: tripIcon, desc: "Travel news"},
     {name: "Entertainment", img: entertamentIcon, desc: "News about films and games"},
-    {name: "Russia", img: russiaIcon, desc: "Russian news radar"},
+    {name: "Russia", img: russiaIcon, desc: "Russian news"},
     {name: "Iceland", img: vikingIcon, desc: "Iceland news and official statements"},
-    {name: "Lobby", img: lobbyIcon, desc: "Sources without topic"},
+    {name: "Lobby", img: lobbyIcon, desc: "Unorganized topics"},
 ];
 
 

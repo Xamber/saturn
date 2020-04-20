@@ -10,14 +10,7 @@ header {
 }
 
 header img {
-    height: 50px;
-    box-sizing: content-box;
-    padding-left: 10px;
-}
-
-
-header .active {
-    font-weight: bold;
+    height: 40px;
 }
 
 header .passive {
