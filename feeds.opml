@@ -86,8 +86,6 @@
         </outline>
         <outline text="Idea" title="Idea">
             <outline type="rss" text="Project Hunt" title="Project Hunt" xmlUrl="https://www.producthunt.com/feed" htmlUrl="https://www.producthunt.com"/>
-            <outline type="rss" text="Kicktraq (Close)" title="Kicktraq" xmlUrl="https://www.kicktraq.com/rss/soclose-latest.rss" htmlUrl="https://www.kicktraq.com"/>
-            <outline type="rss" text="Kicktraq (Day One)" title="Kicktraq" xmlUrl="https://www.kicktraq.com/rss/dayones-latest.rss" htmlUrl="https://www.kicktraq.com"/>
             <outline type="rss" text="Show NN" title="Show NN" xmlUrl="https://hnrss.org/show?points=3" htmlUrl="https://news.ycombinator.com/show"/>
         </outline>
         <outline text="Lobby" title="Lobby">
