@@ -46,10 +46,6 @@ resource "digitalocean_droplet" "saturn" {
 
 }
 
-provider "docker" {
-  host = "ssh://root@${digitalocean_droplet.saturn.ipv4_address}:22"
-}
-
 resource "docker_image" "backend" {
   name = "xamber/saturn-app"
 }
