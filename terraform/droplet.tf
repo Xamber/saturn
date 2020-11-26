@@ -26,22 +26,53 @@ resource "digitalocean_droplet" "saturn" {
     timeout = "2m"
   }
 
-  provisioner "remote-exec" {
-    inline = [
-      "mkdir /home/app",
-    ]
-  }
+//  provisioner "remote-exec" {
+//    inline = [
+//      "mkdir /home/app",
+//    ]
+//  }
+//
+//  provisioner "file" {
+//    source      = "../"
+//    destination = "/home/app"
+//  }
+//
+//  provisioner "remote-exec" {
+//    inline = [
+//      "cd /home/app",
+//      "docker-compose up -d",
+//    ]
+//  }
 
-  provisioner "file" {
-    source      = "../"
-    destination = "/home/app"
-  }
+}
 
-  provisioner "remote-exec" {
-    inline = [
-      "cd /home/app",
-      "docker-compose up -d",
-    ]
-  }
+provider "docker" {
+  host = "ssh://root@${digitalocean_droplet.saturn.ipv4_address}:22"
+}
 
+resource "docker_image" "backend" {
+  name = "xamber/saturn-app"
+}
+
+resource "docker_image" "frontend" {
+  name = "xamber/saturn-frontend"
+}
+
+resource "docker_image" "postgres" {
+  name = "xamber/postgress"
+}
+
+resource "docker_container" "backend" {
+  image = "${docker_image.backend.latest}"
+  name  = "saturn"
+}
+
+resource "docker_container" "frontend" {
+  image = "${docker_image.frontend.latest}"
+  name  = "frontend"
+}
+
+resource "docker_container" "postgres" {
+  image = "${docker_image.postgres.latest}"
+  name  = "postgres"
 }
