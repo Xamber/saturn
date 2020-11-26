@@ -13,6 +13,8 @@ resource "digitalocean_droplet" "saturn" {
   size = "s-1vcpu-1gb"
   private_networking = true
 
+  tags = ["saturn", "web"]
+
   ssh_keys = [
     data.digitalocean_ssh_key.terraform.id
   ]
