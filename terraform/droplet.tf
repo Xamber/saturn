@@ -8,10 +8,9 @@ resource "digitalocean_project" "saturn" {
 
 resource "digitalocean_droplet" "saturn" {
   image = "docker-20-04"
-  name = "www-1"
+  name = "saturn-web-app"
   region = "ams3"
   size = "s-1vcpu-1gb"
-  private_networking = true
 
   tags = ["saturn", "web"]
 
