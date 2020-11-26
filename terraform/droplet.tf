@@ -27,6 +27,12 @@ resource "digitalocean_droplet" "saturn" {
     timeout = "2m"
   }
 
+  provisioner "remote-exec" {
+    inline = [
+      "mkdir /home/app",
+    ]
+  }
+
   provisioner "file" {
     source      = "../"
     destination = "/home/app"
