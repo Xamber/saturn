@@ -40,7 +40,7 @@ resource "digitalocean_droplet" "saturn" {
   provisioner "remote-exec" {
     inline = [
       "cd /home/app",
-      "docker-compose up",
+      "docker-compose up -d",
     ]
   }
 
