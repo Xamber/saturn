@@ -26,7 +26,7 @@ func main() {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 
-	stopChannel := make(chan os.Signal)
+	stopChannel := make(chan os.Signal, 1)
 	signal.Notify(stopChannel, syscall.SIGTERM)
 	signal.Notify(stopChannel, syscall.SIGINT)
 
@@ -42,8 +42,13 @@ func main() {
 	}
 
 	currentDir, err := os.Getwd()
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	feedsPath := filepath.Join(currentDir, "feeds.opml")
 	sources = opml.FromFile(feedsPath)
+
 	err = database.CompleteSourcesList(sources)
 	if err != nil {
 		log.Fatal(err)

@@ -34,7 +34,6 @@ func CreateTables() error {
 		IfNotExists: true,
 	})
 	if err != nil {
-		dblogger.Error(err)
 		return err
 	}
 	dblogger.Info("Table Article was created")
@@ -44,7 +43,6 @@ func CreateTables() error {
 		IfNotExists: true,
 	})
 	if err != nil {
-		dblogger.Error(err)
 		return err
 	}
 	dblogger.Info("Table Source was created")

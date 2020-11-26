@@ -6,31 +6,29 @@ import (
 )
 
 func CompleteSourcesList(sources []entity.Source) error {
-	for _, s := range sources {
-		err := InsertSource(s)
+	for _, source := range sources {
+		_, err := Database.Model(&source).
+			Where("rss = ?", source.RSS).
+			OnConflict("DO NOTHING").
+			SelectOrInsert(&source)
+
 		if err != nil {
 			return err
 		}
+
+		log.WithField("source", source.Name).Info("New source added")
 	}
 	return nil
 }
 
-func InsertSource(source entity.Source) error {
-	_, err := Database.Model(&source).
-		Where("rss = ?", source.RSS).
-		OnConflict("DO NOTHING").
-		SelectOrInsert(&source)
-
-	log.WithField("source", source.Name).Info("New source added")
-	return err
-}
-
 func GetAllSources() (sources []entity.Source, err error) {
 	err = Database.Model(&sources).Select()
+
 	return sources, err
 }
 
 func GetSourcesByGroup(group string) (sources []entity.Source, err error) {
 	err = Database.Model(&sources).Where("source.group = ?", group).Order("name DESC").Select()
-	return sources, nil
+
+	return sources, err
 }
