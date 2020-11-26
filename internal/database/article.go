@@ -15,8 +15,6 @@ func InsertArticle(article entity.Article) error {
 func GetByGroup(group string, limit int) ([]entity.Article, error) {
 	var articles []entity.Article
 	err := Database.Model(&articles).Relation("Source").Where("source.group = ?", group).Order("data DESC").Limit(limit).Select()
-	if err != nil {
-		return articles, err
-	}
-	return articles, nil
+
+	return articles, err
 }
