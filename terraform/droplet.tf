@@ -59,16 +59,16 @@ resource "docker_image" "postgres" {
 }
 
 resource "docker_container" "backend" {
-  image = "${docker_image.backend.latest}"
+  image = docker_image.backend.latest
   name  = "saturn"
 }
 
 resource "docker_container" "frontend" {
-  image = "${docker_image.frontend.latest}"
+  image = docker_image.frontend.latest
   name  = "frontend"
 }
 
 resource "docker_container" "postgres" {
-  image = "${docker_image.postgres.latest}"
+  image = docker_image.postgres.latest
   name  = "postgres"
 }
