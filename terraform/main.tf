@@ -15,7 +15,6 @@ provider "digitalocean" {
 }
 
 provider "docker" {
-  host = "ssh://root@${digitalocean_droplet.saturn.ipv4_address}:22"
 }
 
 data "digitalocean_ssh_key" "terraform" {
