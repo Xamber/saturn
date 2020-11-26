@@ -26,7 +26,7 @@ resource "digitalocean_droplet" "saturn" {
   }
 
   provisioner "file" {
-    source      = "../../../"
+    source      = "../"
     destination = "/home/app"
   }
 
