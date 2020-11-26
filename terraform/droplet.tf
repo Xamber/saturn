@@ -3,7 +3,7 @@ resource "digitalocean_project" "saturn" {
   description = "A project to represent saturn web application resources."
   purpose     = "Web Application"
   environment = "Production"
-  resources   = [digitalocean_droplet.saturn]
+  resources   = [digitalocean_droplet.saturn.urn]
 }
 
 resource "digitalocean_droplet" "saturn" {
