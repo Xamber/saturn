@@ -1,0 +1,72 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Build and deploy release
+
+# Controls when the action will run. 
+on:
+  push:
+    tags:
+      - *
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Get tag
+        id: tag
+        uses: dawidd6/action-get-tag@v1
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v1 
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push backend container
+        id: docker_build_backend
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ./build/package/Dockerfile
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/saturn-app:release-${{steps.tag.outputs.tag}}
+
+      - name: Build and push frontend container
+        id: docker_build_frontend
+        uses: docker/build-push-action@v2
+        with:
+          context: ./frontend
+          file: ./frontend/Dockerfile
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/saturn-app:release-${{steps.tag.outputs.tag}}
+
+      - name: Copy files via scp
+        uses: appleboy/scp-action@master
+        env:
+          HOST: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PORT: ${{ secrets.PORT }}
+          KEY: ${{ secrets.SSH_KEY }}
+        with:
+          source: "."
+          target: "/home/app"
+          - name: Executing remote command
+            uses: appleboy/ssh-action@master
+            env:
+              HOST: ${{ secrets.HOST }}
+              USERNAME: ${{ secrets.USERNAME }}
+              PORT: ${{ secrets.PORT }}
+              KEY: ${{ secrets.SSH_KEY }}
+            with:
+              script: |
+                cd /home/app
+                docker-compose down
+                app_version=${{steps.tag.outputs.tag}} frontend_version=${{steps.tag.outputs.tag}} docker-compose up -d
+
