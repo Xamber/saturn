@@ -41,11 +41,6 @@ resource "digitalocean_droplet" "saturn" {
   }
 
   provisioner "file" {
-    source      = "../"
-    destination = "/home/app"
-  }
-
-  provisioner "file" {
     content     = templatefile("${path.module}/configs/docker-compose.yaml", {
       app_version      = local.app_version,
       frontend_version = local.frontend_version,

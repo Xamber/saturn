@@ -2,9 +2,7 @@ version: '3'
 services:
   saturn:
     container_name: saturn
-    build:
-      context: .
-      dockerfile: ./build/package/Dockerfile
+    image: xamber/saturn-app:release-${app_version}
     ports:
       - 3000:3000
     restart: on-failure
@@ -28,9 +26,7 @@ services:
 
   frontend:
     container_name: frontend
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
+    image: xamber/saturn-frontend:release-${frontend_version}
     ports:
       - 80:80
       - 443:443
