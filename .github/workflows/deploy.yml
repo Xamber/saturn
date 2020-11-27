@@ -20,9 +20,12 @@ jobs:
           target: "/home/app"
       - name: Executing remote command
         uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
+        env:
+          HOST: ${{ secrets.HOST }}
           USERNAME: ${{ secrets.USERNAME }}
           PORT: ${{ secrets.PORT }}
-          KEY: ${{ secrets.SSHKEY }}
-          script: cd /home/app && app_version=0.5.1 frontend_version=0.5.1 docker-compose up -d
+          KEY: ${{ secrets.SSH_KEY }}
+        with:
+          script: |
+            cd /home/app
+            app_version=0.5.1 frontend_version=0.5.1 docker-compose up -d
