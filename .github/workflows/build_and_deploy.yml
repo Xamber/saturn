@@ -69,5 +69,9 @@ jobs:
           script: |
             cd /home/app
             docker-compose down
-            app_version=${{steps.tag.outputs.tag}} frontend_version=${{steps.tag.outputs.tag}} docker-compose up -d
+            export app_version=${{steps.tag.outputs.tag}}
+            export frontend_version=${{steps.tag.outputs.tag}}
+            echo app_version
+            echo frontend_version
+            docker-compose up -d
 
