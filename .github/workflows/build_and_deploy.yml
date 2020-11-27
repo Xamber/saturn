@@ -67,8 +67,6 @@ jobs:
           KEY: ${{ secrets.SSH_KEY }}
         with:
           script: |
-            echo "$CERTIFICATE_CERT" | base64 --decode > ~/ssl/saturn.cert
-            echo "$CERTIFICATE_KEY" | base64 --decode > ~/ssl/saturn.key
             cd /home/app
             docker-compose down
             export app_version=${{steps.tag.outputs.tag}}
