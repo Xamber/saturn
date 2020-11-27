@@ -65,13 +65,13 @@ jobs:
           USERNAME: ${{ secrets.USERNAME }}
           PORT: ${{ secrets.PORT }}
           KEY: ${{ secrets.SSH_KEY }}
+          CERTIFICATE_CERT: ${{ secrets.CERTIFICATE_CERT }}
+          CERTIFICATE_KEY: ${{ secrets.CERTIFICATE_KEY }}
         with:
           script: |
             mkdir ~/ssl/
-            touch ~/ssl/saturn.cert
-            touch ~/ssl/saturn.key
-            echo ${{ secrets.CERTIFICATE_CERT }} > ~/ssl/saturn.cert
-            echo ${{ secrets.CERTIFICATE_KEY }} > ~/ssl/saturn.key
+            echo "$CERTIFICATE_CERT" | base64 --decode > ~/ssl/saturn.cert
+            echo "$CERTIFICATE_KEY" | base64 --decode > ~/ssl/saturn.key
 
       - name: Restart containers
         uses: appleboy/ssh-action@master
