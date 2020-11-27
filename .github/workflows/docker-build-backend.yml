@@ -7,13 +7,13 @@ on:
   push:
     tags:
       - v*
-    branches:
-      - master
 jobs:
   main:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: olegtarasov/get-tag@v2
+        id: tagName
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       - name: Set up Docker Buildx
@@ -30,6 +30,6 @@ jobs:
           context: .
           file: ./build/package/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/saturn-app:${GITHUB_REF##*/}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/saturn-app:release-${{ steps.tagName.outputs.tag }}
       - name: tag digest
-        run: echo ${{ secrets.DOCKERHUB_USERNAME }}/saturn-app:${GITHUB_REF##*/}
+        run: echo ${{ secrets.DOCKERHUB_USERNAME }}/saturn-app:release-${{ steps.tagName.outputs.tag }}

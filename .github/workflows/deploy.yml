@@ -1,6 +1,8 @@
 name: deploy
 on:
   push:
+    tags:
+      - v*
     branches:
       - master
 jobs:
@@ -8,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: olegtarasov/get-tag@v2
+        id: tagName
       - name: Copy files via scp
         uses: appleboy/scp-action@master
         env:
@@ -28,4 +32,4 @@ jobs:
         with:
           script: |
             cd /home/app
-            app_version=${GITHUB_REF##*/} frontend_version=${GITHUB_REF##*/} docker-compose up -d
+            app_version=${{ steps.tagName.outputs.tag }} frontend_version=${{ steps.tagName.outputs.tag }} docker-compose up -d
