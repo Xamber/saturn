@@ -58,21 +58,6 @@ jobs:
           source: "."
           target: "/home/app"
 
-      - name: Prepare certificates
-        uses: appleboy/ssh-action@master
-        env:
-          HOST: ${{ secrets.HOST }}
-          USERNAME: ${{ secrets.USERNAME }}
-          PORT: ${{ secrets.PORT }}
-          KEY: ${{ secrets.SSH_KEY }}
-          CERTIFICATE_CERT: ${{ secrets.CERTIFICATE_CERT }}
-          CERTIFICATE_KEY: ${{ secrets.CERTIFICATE_KEY }}
-        with:
-          script: |
-            mkdir ~/ssl/
-            echo "$CERTIFICATE_CERT" | base64 --decode > ~/ssl/saturn.cert
-            echo "$CERTIFICATE_KEY" | base64 --decode > ~/ssl/saturn.key
-
       - name: Restart containers
         uses: appleboy/ssh-action@master
         env:
@@ -82,11 +67,13 @@ jobs:
           KEY: ${{ secrets.SSH_KEY }}
         with:
           script: |
+            echo "$CERTIFICATE_CERT" | base64 --decode > ~/ssl/saturn.cert
+            echo "$CERTIFICATE_KEY" | base64 --decode > ~/ssl/saturn.key
             cd /home/app
             docker-compose down
             export app_version=${{steps.tag.outputs.tag}}
             export frontend_version=${{steps.tag.outputs.tag}}
-            echo app_version
-            echo frontend_version
+            echo $app_version
+            echo $frontend_version
             docker-compose up -d
 
