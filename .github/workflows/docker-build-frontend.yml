@@ -31,8 +31,10 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:
+          context: ./frontend
+          file: Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/saturn:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/saturn-frontend:latest
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
