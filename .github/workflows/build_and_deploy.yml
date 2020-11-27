@@ -45,7 +45,7 @@ jobs:
           context: ./frontend
           file: ./frontend/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/saturn-app:release-${{steps.tag.outputs.tag}}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/saturn-frontend:release-${{steps.tag.outputs.tag}}
 
       - name: Copy files via scp
         uses: appleboy/scp-action@master
