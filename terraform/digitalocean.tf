@@ -51,7 +51,7 @@ resource "digitalocean_droplet" "saturn" {
       frontend_version = local.frontend_version,
       domain           = local.domain
     })
-    destination = "/tmp/file.log"
+    destination = "/home/app/docker-compose.yaml"
   }
 
   provisioner "remote-exec" {
