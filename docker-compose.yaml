@@ -33,6 +33,8 @@ services:
       - saturn
     networks:
       - orbit
+    volumes:
+      - ~/ssl/:/etc/nginx/certs/
 
 networks:
   orbit:
