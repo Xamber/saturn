@@ -8,7 +8,7 @@ terraform {
 }
 
 locals {
-  app_version      = "0.5"
-  frontend_version = "0.5"
+  app_version      = "0.5.1"
+  frontend_version = "0.5.1"
   domain           = "xamber.tech"
 }
