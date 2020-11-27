@@ -6,7 +6,7 @@ name: Build and deploy release
 on:
   push:
     tags:
-      - *
+      - v*
 jobs:
   main:
     runs-on: ubuntu-latest
