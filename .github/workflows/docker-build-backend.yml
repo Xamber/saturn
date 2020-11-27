@@ -28,6 +28,6 @@ jobs:
           context: .
           file: ./build/package/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/saturn-app:release-${GITHUB_REF}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/saturn-app:release-$GITHUB_REF
       - name: tag digest
-        run: echo ${{ secrets.DOCKERHUB_USERNAME }}/saturn-app:release-${GITHUB_REF}
+        run: echo ${{ secrets.DOCKERHUB_USERNAME }}/saturn-app:release-$GITHUB_REF
