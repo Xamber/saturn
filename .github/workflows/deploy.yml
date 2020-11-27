@@ -31,4 +31,5 @@ jobs:
         with:
           script: |
             cd /home/app
+            docker-compose down
             app_version=${{steps.tag.outputs.tag}} frontend_version=${{steps.tag.outputs.tag}} docker-compose up -d
