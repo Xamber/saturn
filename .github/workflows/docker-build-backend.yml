@@ -6,7 +6,7 @@ name: Build and push Docker - Backend
 on:
   push:
     tags:
-      - *
+      - v*
     branches:
       - master
 jobs:

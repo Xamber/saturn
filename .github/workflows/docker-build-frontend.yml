@@ -6,7 +6,7 @@ name: Build and push Docker - Frontend
 on:
   push:
     tags:
-      - *
+      - v*
     branches:
       - master
   main:
