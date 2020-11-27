@@ -4,14 +4,11 @@ name: Build and push Docker - Backend
 
 # Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
     tags:
       - *
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
+    branches:
+      - master
 jobs:
   main:
     runs-on: ubuntu-latest
