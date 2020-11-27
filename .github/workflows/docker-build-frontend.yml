@@ -31,6 +31,6 @@ on:
           context: ./frontend
           file: Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/saturn-frontend:latest
-      - name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/saturn-app:${GITHUB_REF##*/}
+      - name: tag digest
+        run: echo ${{ secrets.DOCKERHUB_USERNAME }}/saturn-app:${GITHUB_REF##*/}

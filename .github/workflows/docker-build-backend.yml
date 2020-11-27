@@ -32,6 +32,6 @@ jobs:
           context: .
           file: ./build/package/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/saturn-app:latest
-      - name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/saturn-app:${GITHUB_REF##*/}
+      - name: tag digest
+        run: echo ${{ secrets.DOCKERHUB_USERNAME }}/saturn-app:${GITHUB_REF##*/}

@@ -28,4 +28,4 @@ jobs:
         with:
           script: |
             cd /home/app
-            app_version=0.5.1 frontend_version=0.5.1 docker-compose up -d
+            app_version=${GITHUB_REF##*/} frontend_version=${GITHUB_REF##*/} docker-compose up -d
