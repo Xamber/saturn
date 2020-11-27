@@ -68,8 +68,10 @@ jobs:
         with:
           script: |
             mkdir ~/ssl/
-            echo ${{ secrets.CERTIFICATE_CERT }} >> ~/ssl/saturn.cert
-            echo ${{ secrets.CERTIFICATE_KEY }} >> ~/ssl/saturn.key
+            touch ~/ssl/saturn.cert
+            touch ~/ssl/saturn.key
+            echo ${{ secrets.CERTIFICATE_CERT }} > ~/ssl/saturn.cert
+            echo ${{ secrets.CERTIFICATE_KEY }} > ~/ssl/saturn.key
 
       - name: Restart containers
         uses: appleboy/ssh-action@master
