@@ -57,16 +57,17 @@ jobs:
         with:
           source: "."
           target: "/home/app"
-          - name: Executing remote command
-            uses: appleboy/ssh-action@master
-            env:
-              HOST: ${{ secrets.HOST }}
-              USERNAME: ${{ secrets.USERNAME }}
-              PORT: ${{ secrets.PORT }}
-              KEY: ${{ secrets.SSH_KEY }}
-            with:
-              script: |
-                cd /home/app
-                docker-compose down
-                app_version=${{steps.tag.outputs.tag}} frontend_version=${{steps.tag.outputs.tag}} docker-compose up -d
+
+      - name: Executing remote command
+        uses: appleboy/ssh-action@master
+        env:
+          HOST: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PORT: ${{ secrets.PORT }}
+          KEY: ${{ secrets.SSH_KEY }}
+        with:
+          script: |
+            cd /home/app
+            docker-compose down
+            app_version=${{steps.tag.outputs.tag}} frontend_version=${{steps.tag.outputs.tag}} docker-compose up -d
 
